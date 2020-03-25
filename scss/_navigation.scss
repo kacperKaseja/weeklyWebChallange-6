@@ -1,0 +1,9 @@
+.navigation {
+    &__logo {
+        margin: 20px 0;
+
+        svg {
+            transform: scale(0.8);
+        }
+    }
+}

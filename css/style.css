@@ -1,0 +1,125 @@
+html {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header {
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  color: white;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__customer {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-transform: uppercase;
+  background-color: white;
+  color: #838383;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.8rem;
+}
+
+.header__currency {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__currency select {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 2rem;
+}
+
+.header__currency select option {
+  background-color: black;
+  color: white;
+}
+
+.header__myaccount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px;
+  border-left: 1px solid #838383;
+  border-right: 1px solid #838383;
+}
+
+.header__myaccount p {
+  margin-left: 15px;
+  text-transform: uppercase;
+}
+
+.header__myaccount svg {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.header__search {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #838383;
+}
+
+.header__search svg {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.header__search input {
+  display: none;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  padding: 5px;
+}
+
+.navigation__logo {
+  margin: 20px 0;
+}
+
+.navigation__logo svg {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+/*# sourceMappingURL=style.css.map */
