@@ -1,9 +1,58 @@
 .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0 auto;
+    width: 95%;
+
+
+    &__menu {
+        width: 100%;
+        order: 2;
+        background-color: #FD926D;
+
+    }
+
+    &__hamburger {
+        height: 60px;
+        padding: 5px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    &__list {
+        display: none;
+    }
+
     &__logo {
         margin: 20px 0;
 
         svg {
             transform: scale(0.7);
         }
+    }
+
+    &__chart-apperance {
+        width: 100%;
+        display: flex;
+        height: 60px;
+        margin: 10px 0;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid gray;
+        padding: 5px 20px;
+        color: rgb(167, 162, 162);
+
+        svg {
+            transform: scale(0.8);
+        }
+    }
+
+    &__chart-select {
+        display: none;
+        height: 20px;
     }
 }
