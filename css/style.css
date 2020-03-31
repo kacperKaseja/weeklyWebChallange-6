@@ -139,6 +139,7 @@ body {
       -ms-flex-order: 2;
           order: 2;
   background-color: #FD926D;
+  overflow: hidden;
 }
 
 .navigation__hamburger {
@@ -198,7 +199,25 @@ body {
 }
 
 .navigation__list {
-  display: none;
+  -webkit-transition: max-height 0.5s linear;
+  transition: max-height 0.5s linear;
+  max-height: 0;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.navigation__list--active {
+  max-height: 400px;
+  display: block;
+}
+
+.navigation__item {
+  padding: 15px 0;
+  color: white;
+}
+
+.navigation__link {
+  color: white;
 }
 
 .navigation__logo {

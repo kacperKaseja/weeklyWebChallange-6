@@ -6,11 +6,12 @@
     width: 95%;
 
 
+
     &__menu {
         width: 100%;
         order: 2;
         background-color: #FD926D;
-
+        overflow: hidden;
     }
 
     &__hamburger {
@@ -58,7 +59,29 @@
 
 
     &__list {
-        display: none;
+        transition: max-height 0.5s linear;
+        max-height: 0;
+        padding: 0 20px;
+        list-style: none;
+
+
+        &--active {
+            max-height: 400px;
+            display: block;
+
+
+
+        }
+    }
+
+    &__item {
+        padding: 15px 0;
+        color: white;
+    }
+
+    &__link {
+        color: white;
+        // text-decoration: none;
     }
 
     &__logo {
