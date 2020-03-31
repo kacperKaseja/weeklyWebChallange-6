@@ -157,13 +157,55 @@ body {
   color: white;
 }
 
+.navigation__hamburger-ico {
+  width: 40px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navigation__hamburger-ico span {
+  display: block;
+  height: 4px;
+  width: 40px;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navigation__hamburger-ico--active span:nth-child(1) {
+  -webkit-transform: translateY(13px) rotate(45deg);
+          transform: translateY(13px) rotate(45deg);
+}
+
+.navigation__hamburger-ico--active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navigation__hamburger-ico--active span:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+          transform: translateY(-13px) rotate(-45deg);
+}
+
 .navigation__list {
   display: none;
 }
 
 .navigation__logo {
+  display: block;
   margin: 20px auto;
   width: 100%;
+  background-color: white;
   text-align: center;
 }
 
