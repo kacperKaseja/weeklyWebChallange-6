@@ -28,10 +28,13 @@
     }
 
     &__logo {
-        margin: 20px 0;
+        margin: 20px auto;
+        width: 100%;
+        text-align: center;
 
         svg {
-            transform: scale(0.7);
+            margin: 0 auto;
+            width: 70%;
         }
     }
 

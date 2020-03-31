@@ -162,12 +162,14 @@ body {
 }
 
 .navigation__logo {
-  margin: 20px 0;
+  margin: 20px auto;
+  width: 100%;
+  text-align: center;
 }
 
 .navigation__logo svg {
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
+  margin: 0 auto;
+  width: 70%;
 }
 
 .navigation__chart-apperance {
