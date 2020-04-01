@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,6 +28,16 @@ body {
           justify-content: space-between;
 }
 
+@media (min-width: 768px) {
+  .header {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 .header__customer {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -36,7 +46,19 @@ body {
   color: #838383;
   text-align: center;
   padding: 20px 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .header__customer {
+    font-size: 1.4rem;
+    background-color: black;
+    color: white;
+    margin: 0 auto 0 5vw;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    text-align: left;
+  }
 }
 
 .header__currency {
@@ -52,13 +74,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 70px;
+  border-left: 1px solid #838383;
 }
 
 .header__currency select {
   background-color: transparent;
   color: white;
   border: none;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 .header__currency select option {
@@ -75,9 +99,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 16px 0;
   border-left: 1px solid #838383;
   border-right: 1px solid #838383;
+}
+
+@media (min-width: 768px) {
+  .header__myaccount {
+    padding: 0;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 200px;
+  }
 }
 
 .header__myaccount p {
@@ -86,8 +122,8 @@ body {
 }
 
 .header__myaccount svg {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 .header__search {
@@ -103,12 +139,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top: 1px solid #838383;
+}
+
+@media (min-width: 768px) {
+  .header__search {
+    max-width: 50px;
+    margin-right: 5vw;
+    border-right: 1px solid #838383;
+  }
 }
 
 .header__search svg {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
 }
 
 .header__search input {
