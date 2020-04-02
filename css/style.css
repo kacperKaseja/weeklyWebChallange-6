@@ -1,4 +1,3 @@
-@mix;
 html {
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -298,7 +297,7 @@ body {
 .navigation__logo svg {
   margin: 0 auto;
   width: 100%;
-  max-width: 250px;
+  max-width: 170px;
 }
 
 @media (min-width: 768px) {
@@ -316,6 +315,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 60px;
+  max-width: 290px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -323,39 +323,43 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid gray;
-  padding: 5px 20px;
+  padding: 5px 10px;
   color: #a7a2a2;
+  margin-left: auto;
   -ms-flex-item-align: center;
       align-self: center;
 }
 
+@media (min-width: 768px) {
+  .navigation__chart-apperance {
+    height: 40px;
+  }
+}
+
 .navigation__chart-apperance svg {
-  -webkit-transform: scale(0.6);
-          transform: scale(0.6);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
 }
 
 @media (min-width: 768px) {
-  .navigation__chart-apperance {
-    max-width: 350px;
-    margin-left: auto;
-    height: 50px;
+  .navigation__chart-apperance svg {
+    -webkit-transform: scale(0.5) translateX(-20px);
+            transform: scale(0.5) translateX(-20px);
   }
 }
 
 .navigation__chart-select {
   display: none;
-  height: 20px;
 }
 
 @media (min-width: 768px) {
   .navigation__chart-select {
-    display: block;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: 60px;
-    max-width: 350px;
+    max-width: 290px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -363,10 +367,16 @@ body {
         -ms-flex-align: center;
             align-items: center;
     border: 1px solid gray;
-    padding: 5px 20px;
+    padding: 5px 10px;
     color: #a7a2a2;
     margin-left: auto;
-    height: 50px;
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+  .navigation__chart-select {
+    height: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */
