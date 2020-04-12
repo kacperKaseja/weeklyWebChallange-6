@@ -52,6 +52,10 @@
         justify-content: center;
         align-items: center;
 
+        @include tablet {
+            display: none;
+        }
+
         p {
             display: inline;
             font-size: 1.5rem;
@@ -70,9 +74,7 @@
                 margin-left: 20px;
             }
         }
-
     }
-
 }
 
 .rotate {

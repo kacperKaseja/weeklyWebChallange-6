@@ -1,0 +1,35 @@
+.shop-chart {
+    width: 100%;
+    background: $main-orange;
+
+    &__menu {
+        width: 100%;
+        font-size: 1.9rem;
+        padding: 15px 10px;
+        color: white;
+        text-transform: uppercase;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: url(/img/ico/Rectangle.svg) no-repeat 95% 20px, #F4845D;
+        background-size: 20px;
+        transition: all ease 0.5s;
+    }
+
+}
+
+.inside-menu {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    list-style: none;
+    transition: all ease 0.5s;
+
+    &.open {
+        height: 130px;
+    }
+
+    li {
+        margin: 10px 0;
+
+    }
+}

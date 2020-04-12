@@ -377,6 +377,10 @@ body {
   position: fixed;
   display: none;
   list-style: none;
+  background-color: white;
+  padding: 10px 10px;
+  border: 1px solid black;
+  border-top: none;
 }
 
 .navigation__item .navigation__dropdown .navigation__dropdown-item {
@@ -559,6 +563,12 @@ body {
           align-items: center;
 }
 
+@media (min-width: 768px) {
+  .contact__socials {
+    display: none;
+  }
+}
+
 .contact__socials p {
   display: inline;
   font-size: 1.5rem;
@@ -587,5 +597,41 @@ body {
   border-bottom: none;
   -webkit-transition: border 2s;
   transition: border 2s;
+}
+
+.shop-chart {
+  width: 100%;
+  background: #FD926D;
+}
+
+.shop-chart__menu {
+  width: 100%;
+  font-size: 1.9rem;
+  padding: 15px 10px;
+  color: white;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(/img/ico/Rectangle.svg) no-repeat 95% 20px, #F4845D;
+  background-size: 20px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.inside-menu {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  list-style: none;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.inside-menu.open {
+  height: 130px;
+}
+
+.inside-menu li {
+  margin: 10px 0;
 }
 /*# sourceMappingURL=style.css.map */

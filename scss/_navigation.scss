@@ -5,7 +5,6 @@
     margin: 0 5vw;
     max-width: 100%;
 
-
     @include tablet {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -17,7 +16,6 @@
     }
 
     @include desktop {
-
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
@@ -31,9 +29,7 @@
         justify-content: center;
         width: 100%;
         background-color: white;
-
         grid-area: logo;
-
 
         @include tablet {
             justify-content: flex-start
@@ -153,6 +149,10 @@
             position: fixed;
             display: none;
             list-style: none;
+            background-color: white;
+            padding: 10px 10px;
+            border: 1px solid black;
+            border-top: none;
 
             .navigation__dropdown-item {
                 margin: 10px 0;

@@ -30,3 +30,24 @@ emailBtn.addEventListener('click', () => {
 })
 
 //Rotate btn ends
+
+// Menu shop-chart
+
+const menuUl = document.querySelector('.menu__main-list');
+const insideMenu = document.querySelector('.inside-menu');
+
+menuUl.addEventListener('click', () => {
+    menuUl.classList.toggle('open');
+    insideMenu.classList.toggle('open');
+})
+
+const menuLinks = document.querySelectorAll('.inside-menu li')
+
+menuLinks.forEach((item) => {
+    item.addEventListener('click', () => {
+        let selection = item.textContent;
+        let dataValue = item.getAttribute('data-value');
+        console.log(selection)
+        document.querySelector('.main-list__main-li span').textContent = selection;
+    })
+})
