@@ -51,3 +51,38 @@ menuLinks.forEach((item) => {
         document.querySelector('.main-list__main-li span').textContent = selection;
     })
 })
+
+//Menu shop-chart
+
+const chartButtons = [...document.querySelectorAll('.shop-chart__button')]
+
+let id;
+
+chartButtons.forEach(item => {
+
+    item.addEventListener('click', () => {
+        item.style.border = 'none';
+        item.style.transform = 'translateY(8px)';
+        id = window.setTimeout(() => {
+            item.style.transform = 'translateY(0px)';
+            item.style.borderBottom = '6px solid #DD6B44'
+        }, 1000)
+    })
+
+    console.log(id);
+
+
+
+    item.addEventListener('mousedown', () => {
+        item.classList.add('cliced');
+        window.clearTimeout(id);
+    })
+    item.addEventListener('mouseup', () => {
+        window.clearTimeout(id);
+        item.classList.remove('cliced');
+    })
+
+
+
+
+})
