@@ -5,6 +5,7 @@
     margin: 0 5vw;
     max-width: 100%;
 
+
     @include tablet {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -24,6 +25,31 @@
 
     }
 
+    &__logo {
+        display: block;
+        margin: 20px auto;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        grid-area: logo;
+        align-self: start;
+
+        @include tablet {
+            text-align: left;
+        }
+
+        svg {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 170px;
+            transform: scale(1.6);
+
+            @include tablet {
+                transform: scale(1.3);
+            }
+        }
+    }
+
     &__menu {
         width: 100%;
         order: 2;
@@ -33,6 +59,9 @@
 
         @include desktop {
             background: white;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         }
 
     }
@@ -83,18 +112,17 @@
         }
     }
 
-
     &__list {
         transition: max-height 0.5s linear;
         max-height: 0;
         padding: 0 20px;
         list-style: none;
+        margin-right: 30px;
 
         @include desktop {
             display: flex;
             max-height: 60px;
             background: white;
-
         }
 
         &--active {
@@ -105,34 +133,39 @@
 
     &__item {
         padding: 15px 0;
+        margin: 0 10px;
+        position: relative;
 
-    }
+        .navigation__link {
+            color: white;
+            display: block;
 
-    &__link {
-        color: white;
-
-        @include desktop {
-            color: black;
-        }
-    }
-
-    &__logo {
-        display: block;
-        margin: 20px auto;
-        width: 100%;
-        background-color: white;
-        text-align: center;
-        grid-area: logo;
-        align-self: start;
-
-        @include tablet {
-            text-align: left;
+            @include desktop {
+                font-size: 1.8rem;
+                color: black;
+                text-decoration: none;
+            }
         }
 
-        svg {
-            margin: 0 auto;
-            width: 100%;
-            max-width: 170px;
+        .navigation__dropdown {
+            position: absolute;
+            left: 0;
+            display: none;
+            list-style: none;
+
+            .navigation__dropdown-item {
+                a {
+                    list-style: none;
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &:hover {
+            .navigation__dropdown {
+                display: block;
+            }
         }
     }
 
@@ -156,8 +189,6 @@
                 transform: scale(0.5) translateX(-20px);
             }
         }
-
-
     }
 
     &__chart-select {
@@ -167,7 +198,6 @@
         @include tablet {
             @include menuCharts;
             border-bottom: none;
-
         }
     }
 }

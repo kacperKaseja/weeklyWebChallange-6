@@ -4,7 +4,6 @@ const menu = document.querySelector('.navigation__list');
 const hamburgerActive = () => {
     hamburgerIco.classList.toggle('navigation__hamburger-ico--active');
     menuActive();
-
 }
 
 const menuActive = () => {
