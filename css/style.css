@@ -14,6 +14,12 @@ body {
           box-sizing: border-box;
 }
 
+.rotate {
+  border-bottom: none;
+  -webkit-transition: border 2s;
+  transition: border 2s;
+}
+
 .header {
   font-size: 1.5rem;
   display: -webkit-box;
@@ -199,25 +205,29 @@ body {
 }
 
 .navigation__logo {
-  display: block;
-  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   background-color: white;
-  text-align: center;
   grid-area: logo;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
 }
 
 @media (min-width: 768px) {
   .navigation__logo {
-    text-align: left;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
 .navigation__logo svg {
-  margin: 0 auto;
   width: 100%;
   max-width: 170px;
   -webkit-transform: scale(1.6);
@@ -226,8 +236,9 @@ body {
 
 @media (min-width: 768px) {
   .navigation__logo svg {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    margin-left: 30px;
   }
 }
 
@@ -471,6 +482,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media (min-width: 768px) {
@@ -480,15 +493,21 @@ body {
 }
 
 .contact__email {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: #EDEDED;
   height: 60px;
 }
 
 .contact__email .contact__input {
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: 100%;
   border: none;
   background: transparent;
@@ -497,10 +516,11 @@ body {
   font-style: italic;
 }
 
-.contact .contact__button {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 80px;
-          flex: 0 1 80px;
+.contact__button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 70px;
+          flex: 1 1 70px;
+  max-width: 80px;
   border: none;
   background: #FD926D;
   color: white;
@@ -520,14 +540,52 @@ body {
   transition: border 2s;
 }
 
-.contact .contact__button svg {
+.contact__button svg {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
 
-.contact .rotate {
-  border: none;
-  -webkit-transition: border-width 2s;
-  transition: border-width 2s;
+.contact__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__socials p {
+  display: inline;
+  font-size: 1.5rem;
+}
+
+.contact__socials .social__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  background-color: #eee;
+  height: 60px;
+}
+
+.contact__socials .social__links:first-of-type {
+  margin-left: 20px;
+}
+
+.rotate {
+  border-bottom: none;
+  -webkit-transition: border 2s;
+  transition: border 2s;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,18 +2,21 @@
     width: 90%;
     margin: 10px auto;
     display: flex;
+    flex-wrap: wrap;
 
     @include tablet {
         display: none;
     }
 
     &__email {
-        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
         background: #EDEDED;
         height: 60px;
 
         .contact__input {
-            width: 100%;
+            flex-grow: 1;
             height: 100%;
             border: none;
             background: transparent;
@@ -23,9 +26,9 @@
         }
     }
 
-    .contact__button {
-        flex: 0 1 80px;
-
+    &__button {
+        flex: 1 1 70px;
+        max-width: 80px;
         border: none;
         background: $main-orange;
         color: white;
@@ -40,12 +43,39 @@
         svg {
             transform: scale(0.8);
         }
+    }
+
+    &__socials {
+        display: flex;
+        width: 100%;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            display: inline;
+            font-size: 1.5rem;
+            // margin-right: 10px;
+        }
+
+        .social__links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            background-color: #eee;
+            height: 60px;
+
+            &:first-of-type {
+                margin-left: 20px;
+            }
+        }
 
     }
 
-    .rotate {
+}
 
-        border: none;
-        transition: border-width 2s;
-    }
+.rotate {
+    border-bottom: none;
+    transition: border 2s;
 }

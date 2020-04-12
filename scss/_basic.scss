@@ -16,3 +16,8 @@ body {
 .main-wrapper {
     @include tablet {}
 }
+
+.rotate {
+    border-bottom: none;
+    transition: border 2s;
+}
