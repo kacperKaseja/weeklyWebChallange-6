@@ -239,6 +239,7 @@ body {
   background-color: #FD926D;
   overflow: hidden;
   grid-area: menu;
+  margin-top: 10px;
 }
 
 @media (min-width: 1024px) {
@@ -362,10 +363,13 @@ body {
 }
 
 .navigation__item .navigation__dropdown {
-  position: absolute;
-  left: 0;
+  position: fixed;
   display: none;
   list-style: none;
+}
+
+.navigation__item .navigation__dropdown .navigation__dropdown-item {
+  margin: 10px 0;
 }
 
 .navigation__item .navigation__dropdown .navigation__dropdown-item a {
@@ -459,5 +463,71 @@ body {
   .navigation__chart-select {
     height: 40px;
   }
+}
+
+.contact {
+  width: 90%;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    display: none;
+  }
+}
+
+.contact__email {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: #EDEDED;
+  height: 60px;
+}
+
+.contact__email .contact__input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px 20px;
+  font-size: 1.9rem;
+  font-style: italic;
+}
+
+.contact .contact__button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 80px;
+          flex: 0 1 80px;
+  border: none;
+  background: #FD926D;
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 8px solid #DD6B44;
+  -webkit-transition: border 2s;
+  transition: border 2s;
+}
+
+.contact .contact__button svg {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.contact .rotate {
+  border: none;
+  -webkit-transition: border-width 2s;
+  transition: border-width 2s;
 }
 /*# sourceMappingURL=style.css.map */
