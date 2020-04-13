@@ -54,26 +54,25 @@ menuLinks.forEach((item) => {
 
 //Menu shop-chart
 
-
-
 const cardButtonChange = function () {
 
     const chartButtons = [...document.querySelectorAll('.shop-chart__button')]
-
     let id;
 
     chartButtons.forEach(item => {
 
         item.addEventListener('click', () => {
-            item.style.border = 'none';
-            item.style.transform = 'translateY(8px)';
-            id = window.setTimeout(() => {
-                item.style.transform = 'translateY(0px)';
-                item.style.borderBottom = '6px solid #DD6B44'
-            }, 1000)
+            let innerWidth = window.innerWidth;
+            if (innerWidth < 1024) {
+                item.style.border = 'none';
+                item.style.transform = 'translateY(8px)';
+                id = window.setTimeout(() => {
+                    item.style.transform = 'translateY(0px)';
+                    item.style.borderBottom = '6px solid #DD6B44'
+                }, 1000)
+            }
         })
 
-        console.log(id);
 
         item.addEventListener('mousedown', () => {
             item.classList.add('cliced');
@@ -89,6 +88,7 @@ const cardButtonChange = function () {
 }
 
 cardButtonChange();
+
 
 //Click Events To Buttons End's
 
@@ -127,3 +127,5 @@ loadButton.addEventListener('click', () => {
     gallery.append(newCard_2);
     cardButtonChange();
 })
+
+//

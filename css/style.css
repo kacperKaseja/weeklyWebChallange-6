@@ -697,16 +697,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #FD926D;
   width: 90%;
   margin: 5px auto;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: white;
   padding: 5px 5px;
   border: none;
@@ -736,5 +736,13 @@ body {
   color: white;
   text-transform: uppercase;
   border: none;
+}
+
+.discount {
+  text-align: center;
+}
+
+.discount .shop-chart__gallery-discount {
+  padding-bottom: 0px;
 }
 /*# sourceMappingURL=style.css.map */
