@@ -1,0 +1,22 @@
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+
+    .footer__hamburger-ico {
+        @include hamburgerIco;
+    }
+
+    .footer__copyrights {
+        text-align: right;
+
+        .footer__text {
+            font-size: 1.6rem;
+            margin-right: 10px;
+            color: #707070;
+        }
+    }
+}
