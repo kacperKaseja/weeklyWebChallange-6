@@ -1,5 +1,16 @@
 .discount {
     text-align: center;
+    position: relative;
+    padding-top: 70px;
+
+    .discount__price {
+        position: absolute;
+        width: 150px;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99;
+    }
 
     .shop-chart__gallery-discount {
         padding-bottom: 0px;

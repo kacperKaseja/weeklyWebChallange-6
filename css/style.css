@@ -740,6 +740,18 @@ body {
 
 .discount {
   text-align: center;
+  position: relative;
+  padding-top: 70px;
+}
+
+.discount .discount__price {
+  position: absolute;
+  width: 150px;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 99;
 }
 
 .discount .shop-chart__gallery-discount {
